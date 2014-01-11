@@ -13,8 +13,10 @@ module Fog
         attribute :network, :aliases => 'network'
         attribute :external_ip, :aliases => 'externalIP'
         attribute :state, :aliases => 'status'
-        attribute :zone_name, :aliases => 'zone'
-        attribute :machine_type, :aliases => 'machineType'
+        # attribute :zone_name, :aliases => 'zone'
+        attribute_with_url_and_name :zone_name
+        # attribute :machine_type, :aliases => 'machineType'
+        attribute_with_url_and_name :machine_type, :aliases => 'machineType'
         attribute :disks, :aliases => 'disks'
         attribute :metadata
         attribute :tags, :squash => 'items'
